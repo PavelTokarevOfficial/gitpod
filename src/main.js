@@ -1,6 +1,9 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue'; // Путь к вашему основному компоненту приложения
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 import Features from './components/HomePage/Features.vue'
 import Pricing from './components/Pricing.vue'
