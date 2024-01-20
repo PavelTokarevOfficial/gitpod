@@ -6,6 +6,7 @@
     <AdvantageRemoteControl/>
     <Reviews/>
     <GetStarted/>
+    woqeroiqejoirjiqeirjgiqijorgjqirgjqerog
   </main>
 </template>
 
