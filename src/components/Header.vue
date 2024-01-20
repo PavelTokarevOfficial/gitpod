@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar fixed-top py-3">
     <div class="container">
-      <router-link class="navbar-brand" to="/">
+      <router-link class="navbar-brand" to="/gitpod/">
         <img src="../assets/logo.png" alt="Bootstrap">
       </router-link>
 
@@ -51,11 +51,11 @@ export default {
   data() {
     return {
       routes: [
-        {link: '/features', nameUrl: "Features"},
-        {link: '/pricing', nameUrl: "Pricing"},
-        {link: '/blog', nameUrl: "Blog"},
-        {link: '/docs', nameUrl: "Docs"},
-        {link: '/changelog', nameUrl: "WeAreHiring"},
+        {link: '/gitpod/features', nameUrl: "Features"},
+        {link: '/gitpod/pricing', nameUrl: "Pricing"},
+        {link: '/gitpod/blog', nameUrl: "Blog"},
+        {link: '/gitpod/docs', nameUrl: "Docs"},
+        {link: '/gitpod/changelog', nameUrl: "WeAreHiring"},
       ]
 
     }

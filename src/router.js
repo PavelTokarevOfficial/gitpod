@@ -12,35 +12,35 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/gitpod/',
             component: HomePage
         },
         {
-            path: '/features',
+            path: '/gitpod/features',
             component: Features
         },
         {
-            path: '/pricing',
+            path: '/gitpod/pricing',
             component: Pricing
         },
         {
-            path: '/blog',
+            path: '/gitpod/blog',
             component: Blog
         },
         {
-            path: '/docs',
+            path: '/gitpod/docs',
             component: Docs
         },
         {
-            path: '/changelog',
+            path: '/gitpod/changelog',
             component: Changelog
         },
         {
-            path: '/we-are-hiring',
+            path: '/gitpod/we-are-hiring',
             component: WeAreHiring
         },
         {
-            path: '/login',
+            path: '/gitpod/login',
             component: Login
         },
     ],
