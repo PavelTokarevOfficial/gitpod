@@ -16,11 +16,11 @@
 
       <div class="row">
         <div class="col-auto my-2">
-          <button class="button btnMore" @click="$router.push('/features')">More on prebuilds</button>
+          <button class="button btnMore" @click="$router.push('/gitpod/features')">More on prebuilds</button>
         </div>
 
         <div class="col-auto my-2">
-          <button class="button btnDocumentation" @click="$router.push('/docs')">Documentation</button>
+          <button class="button btnDocumentation" @click="$router.push('/gitpod/docs')">Documentation</button>
         </div>
       </div>
     </div>

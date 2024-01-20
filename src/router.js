@@ -10,6 +10,7 @@ import HomePage from './components/HomePage/HomePage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
+    base: '/gitpod/',
     routes: [
         {
             path: '/gitpod/',

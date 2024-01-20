@@ -7,15 +7,12 @@
 
       <ul class="nav">
         <li class="d-none d-lg-block" v-for="route in routes">
-          <router-link :to="route.link" class="nav-link routerLink" aria-current="page">{{
-              route.nameUrl
-            }}
-          </router-link>
+          <router-link :to="route.link" class="nav-link routerLink" aria-current="page">{{ route.nameUrl }}</router-link>
         </li>
       </ul>
 
       <div class="col-auto d-none d-lg-block">
-        <button class="btnLogin" @click="this.$router.push({ path: '/login' })">login</button>
+        <button class="btnLogin" @click="this.$router.push({ path: '/gitpod/login' })">login</button>
       </div>
 
       <!--кнопка меню-->
@@ -32,11 +29,17 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <router-link to="/gitpod/" class="nav-link routerLink" aria-current="page">Home</router-link>
+            </li>
             <li v-for="route in routes" class="nav-item">
               <router-link :to="route.link" class="nav-link routerLink" aria-current="page">{{
                   route.nameUrl
                 }}
               </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/gitpod/login" class="nav-link routerLink" aria-current="page">Login</router-link>
             </li>
           </ul>
         </div>
@@ -55,18 +58,16 @@ export default {
         {link: '/gitpod/pricing', nameUrl: "Pricing"},
         {link: '/gitpod/blog', nameUrl: "Blog"},
         {link: '/gitpod/docs', nameUrl: "Docs"},
-        {link: '/gitpod/changelog', nameUrl: "WeAreHiring"},
+        {link: '/gitpod/we-are-hiring', nameUrl: "WeAreHiring"},
       ]
-
     }
   }
 }
 </script>
-
 <style scoped lang="scss">
 .navbar {
   background-color: rgba(245, 244, 244, 0.9);
-  backdrop-filter: blur(5px);
+
   .routerLink {
     color: black;
     border-radius: 10px;

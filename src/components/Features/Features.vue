@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Features
+  <div class="features container">
+    <p>Features</p>
   </div>
 </template>
 
@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.features{
+  min-height: 100vh;
+  p{
+    padding-top: 100px;
+  }
+}
 </style>

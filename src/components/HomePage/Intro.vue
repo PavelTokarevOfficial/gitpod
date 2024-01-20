@@ -8,7 +8,7 @@
 
       <div class="row information d-flex align-items-center my-4">
         <div class="col-auto">
-          <button class="btn" @click="$router.push('/pricing')">Try Now</button>
+          <button class="btn" @click="$router.push('/gitpod/pricing')">Try Now</button>
         </div>
         <div class="col-auto">
           <p class="actionDescription m-0">Open a workspace.<br>Start from any Git context.</p>
