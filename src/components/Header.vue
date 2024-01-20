@@ -1,13 +1,16 @@
 <template>
-  <nav class="navbar fixed-top">
+  <nav class="navbar fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <router-link class="navbar-brand" to="/">
         <img src="../assets/logo.png" alt="Bootstrap">
-      </a>
+      </router-link>
 
-      <ul class="nav ">
+      <ul class="nav">
         <li class="d-none d-lg-block" v-for="route in routes">
-          <router-link :to="route.link" class="nav-link routerLink" aria-current="page">{{ route.nameUrl }}</router-link>
+          <router-link :to="route.link" class="nav-link routerLink" aria-current="page">{{
+              route.nameUrl
+            }}
+          </router-link>
         </li>
       </ul>
 
@@ -48,7 +51,7 @@ export default {
   data() {
     return {
       routes: [
-        {link: '/', nameUrl: "Features"},
+        {link: '/features', nameUrl: "Features"},
         {link: '/pricing', nameUrl: "Pricing"},
         {link: '/blog', nameUrl: "Blog"},
         {link: '/docs', nameUrl: "Docs"},
@@ -62,22 +65,28 @@ export default {
 
 <style scoped lang="scss">
 .navbar {
-  .routerLink{
-    color:black;
+  background-color: rgba(245, 244, 244, 0.9);
+  backdrop-filter: blur(5px);
+  .routerLink {
+    color: black;
     border-radius: 10px;
     padding: 10px 20px;
-    &:hover{
+    transition: .5s;
+
+    &:hover {
       background-color: #FFAE33;
     }
   }
-  .btnLogin{
+
+  .btnLogin {
     background-color: #12100C;
     color: white;
     padding: 5px 15px;
     border-radius: 10px;
     border: none;
     transition: .5s;
-    &:hover{
+
+    &:hover {
       filter: invert(1);
     }
   }
