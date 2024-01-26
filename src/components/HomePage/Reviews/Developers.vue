@@ -1,15 +1,34 @@
 <template>
-  <div class="row developers">
-    <DeveloperItem v-for="post in posts" :post="post"/>
+  <div class="row developers mt-5">
+    <swiper
+        :modules="modules"
+        :slides-per-view="3"
+        :space-between="15"
+        :autoplay="{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }"
+    >
+      <swiper-slide v-for="post in posts">
+        <DeveloperItem :post="post"/>
+      </swiper-slide>
+    </swiper>
+
   </div>
 </template>
 
 <script>
 import DeveloperItem from "./DeveloperItem.vue";
+import {Swiper, SwiperSlide} from 'swiper/vue';
+import {Autoplay, A11y} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay'
+
 
 export default {
   name: "Developers",
-  components: {DeveloperItem},
+  components: {DeveloperItem, Swiper, SwiperSlide},
   data() {
     return {
       posts: [
@@ -112,14 +131,11 @@ export default {
         },
       ]
     }
-  }
+  },
+  setup() {
+    return {
+      modules: [Autoplay, A11y],
+    };
+  },
 }
 </script>
-
-<style scoped lang="scss">
-.developers {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-</style>

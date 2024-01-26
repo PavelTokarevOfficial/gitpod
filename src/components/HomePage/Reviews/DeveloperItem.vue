@@ -1,5 +1,5 @@
 <template>
-  <div class="item col-9 col-md-6 col-lg-3 m-3 d-flex flex-column justify-content-between">
+  <div class="item d-flex flex-column justify-content-between h-100">
     <div class="row">
       <p>{{ post.feedback }}</p>
     </div>
