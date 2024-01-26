@@ -1,19 +1,24 @@
 <template>
   <div class="login container">
-    <p>Login</p>
+    <h2 class="text-center">Login</h2>
+    <LayoutDevelopment/>
   </div>
 </template>
 
 <script>
+import LayoutDevelopment from "./LayoutDevelopment.vue";
+
 export default {
-  name: "Login"
+  name: "Login",
+  components: {LayoutDevelopment}
 }
 </script>
 
 <style scoped lang="scss">
-.login{
+.login {
   min-height: 100vh;
-  p{
+
+  h2 {
     padding-top: 100px;
   }
 }

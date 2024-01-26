@@ -1,19 +1,23 @@
 <template>
   <div class="features container">
-    <p>Features</p>
+    <h2 class="text-center">Features</h2>
+    <LayoutDevelopment/>
   </div>
 </template>
 
 <script>
+import LayoutDevelopment from "../LayoutDevelopment.vue";
+
 export default {
-  name: "Features"
+  name: "Features",
+  components: {LayoutDevelopment}
 }
 </script>
 
 <style scoped lang="scss">
 .features{
   min-height: 100vh;
-  p{
+  h2{
     padding-top: 100px;
   }
 }

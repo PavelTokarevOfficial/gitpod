@@ -18,8 +18,8 @@
             <span>{{ link.text }}</span>
           </a>
         </div>
-        <p class="text-center my-3 px-5">
-          Or prefix any GitLab, GitHub or Bitbucket URL with
+        <p class="descriptionVersionControls text-center my-3 px-5">
+          Or prefix any GitLab, GitHub or Bitbucket URL with <span>gitpod.io/#</span>
         </p>
       </div>
     </div>
@@ -57,56 +57,17 @@ export default {
   data() {
     return {
       versionControls: [
-        {
-          img: iconGitLab,
-          url: '#',
-          text: 'Continue with GitLab',
-          bgColor: '#FC6D26',
-        },
-        {
-          img: iconGithub,
-          url: '#',
-          text: 'Continue with GitHub',
-          bgColor: '#000000',
-        },
-        {
-          img: iconBitbucket,
-          url: '#',
-          text: 'Continue with Bitbucket',
-          bgColor: '#2684FF',
-        },
+        {img: iconGitLab, url: '#', text: 'Continue with GitLab', bgColor: '#FC6D26'},
+        {img: iconGithub, url: '#', text: 'Continue with GitHub', bgColor: '#000000'},
+        {img: iconBitbucket, url: '#', text: 'Continue with Bitbucket', bgColor: '#2684FF'},
       ],
       listTools: [
-        {
-          img: iconTs,
-          url: '#',
-          text: 'Node or TypeScript',
-        },
-        {
-          img: iconPyton,
-          url: '#',
-          text: 'Python',
-        },
-        {
-          img: iconGo,
-          url: '#',
-          text: 'Go',
-        },
-        {
-          img: iconRust,
-          url: '#',
-          text: 'Rust',
-        },
-        {
-          img: iconJava,
-          url: '#',
-          text: 'Java',
-        },
-        {
-          img: iconSvelte,
-          url: '#',
-          text: 'Svelte',
-        },
+        {img: iconTs, url: '#', text: 'Node or TypeScript'},
+        {img: iconPyton, url: '#', text: 'Python'},
+        {img: iconGo, url: '#', text: 'Go'},
+        {img: iconRust, url: '#', text: 'Rust'},
+        {img: iconJava, url: '#', text: 'Java'},
+        {img: iconSvelte, url: '#', text: 'Svelte'},
       ],
     };
   },
@@ -121,12 +82,30 @@ export default {
     font-weight: 700;
     line-height: 133%;
   }
+  h3 {
+    font-size: calc(1.5rem + 5 * (100vw - 320px) / 880);
+    font-weight: 700;
+    line-height: 133%;
+  }
 
   .link {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 10px;
     color: white;
+    transition: .5s;
+    &:hover {
+      filter: opacity(60%);
+    }
+
+  }
+
+  .descriptionVersionControls {
+    span {
+      background-color: #FFE4BC;
+      padding: 5px;
+      border-radius: 20px;
+    }
   }
 
   .toolItem {

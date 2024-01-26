@@ -38,7 +38,7 @@ export default {
 .advantages {
   img{
     border-radius: 20px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
   }
   .information {
     padding-right: 30px;
@@ -59,7 +59,7 @@ export default {
     border: none;
     padding: 11px 20px;
     border-radius: 10px;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10);
     transition: 0.5s;
   }
   .btnMore{

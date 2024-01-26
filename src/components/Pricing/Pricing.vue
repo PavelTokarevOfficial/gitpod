@@ -1,12 +1,16 @@
 <template>
   <div class="pricing container">
-    <p>Pricing</p>
+    <h2 class="text-center">Pricing</h2>
+    <LayoutDevelopment/>
   </div>
 </template>
 
 <script>
+import LayoutDevelopment from "../LayoutDevelopment.vue";
+
 export default {
-  name: "Pricing"
+  name: "Pricing",
+  components: {LayoutDevelopment}
 }
 </script>
 
@@ -14,7 +18,7 @@ export default {
 .pricing {
   min-height: 100vh;
 
-  p {
+  h2 {
     padding-top: 100px;
   }
 }

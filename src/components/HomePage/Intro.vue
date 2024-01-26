@@ -1,5 +1,5 @@
 <template>
-  <section class="row intro mb-5 intro">
+  <section class="row intro">
     <div class="col-12 col-lg-6 my-auto">
       <div class="row my-3">
         <h1>Always<br>Ready to Code.</h1>

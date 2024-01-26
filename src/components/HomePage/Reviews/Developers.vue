@@ -2,18 +2,17 @@
   <div class="row developers mt-5">
     <swiper
         :modules="modules"
-        :slides-per-view="3"
+        :slides-per-view="getSlidesPerView()"
         :space-between="15"
         :autoplay="{
-                  delay: 3000,
-                  disableOnInteraction: false,
-                }"
+    delay: 3000,
+    disableOnInteraction: false,
+  }"
     >
-      <swiper-slide v-for="post in posts">
-        <DeveloperItem :post="post"/>
+      <swiper-slide v-for="post in posts" :key="post.id">
+        <DeveloperItem :post="post" />
       </swiper-slide>
     </swiper>
-
   </div>
 </template>
 
@@ -131,6 +130,17 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+    getSlidesPerView() {
+      if (window.innerWidth < 768) {
+        return 1;
+      } else if (window.innerWidth < 992) {
+        return 2;
+      } else {
+        return 3;
+      }
+    },
   },
   setup() {
     return {

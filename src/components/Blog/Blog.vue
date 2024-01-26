@@ -1,12 +1,16 @@
 <template>
   <div class="blog container">
-    <p>Blog</p>
+    <h2 class="text-center">Blog</h2>
+    <LayoutDevelopment/>
   </div>
 </template>
 
 <script>
+import LayoutDevelopment from "../LayoutDevelopment.vue";
+
 export default {
-  name: "Blog"
+  name: "Blog",
+  components: {LayoutDevelopment}
 }
 </script>
 
@@ -14,7 +18,7 @@ export default {
 .blog {
   min-height: 100vh;
 
-  p {
+  h2 {
     padding-top: 100px;
   }
 }

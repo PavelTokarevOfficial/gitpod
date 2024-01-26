@@ -1,19 +1,24 @@
 <template>
-    <div class="weAreHiring container">
-    <p>WeAreHiring</p>
+  <div class="weAreHiring container">
+    <h2 class="text-center">WeAreHiring</h2>
+    <LayoutDevelopment/>
   </div>
 </template>
 
 <script>
+import LayoutDevelopment from "../LayoutDevelopment.vue";
+
 export default {
-  name: "WeAreHiring"
+  name: "WeAreHiring",
+  components: {LayoutDevelopment}
 }
 </script>
 
 <style scoped lang="scss">
-.weAreHiring{
+.weAreHiring {
   min-height: 100vh;
-  p{
+
+  h2 {
     padding-top: 100px;
   }
 }
